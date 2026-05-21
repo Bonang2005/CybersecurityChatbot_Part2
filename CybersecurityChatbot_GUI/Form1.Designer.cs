@@ -28,12 +28,65 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            ChatBox = new RichTextBox();
+            SendButton = new Button();
+            InputBox = new TextBox();
+            SuspendLayout();
+            // 
+            // ChatBox
+            // 
+            ChatBox.BackColor = SystemColors.ActiveCaptionText;
+            ChatBox.ForeColor = Color.Cyan;
+            ChatBox.Location = new Point(12, 12);
+            ChatBox.Name = "ChatBox";
+            ChatBox.ReadOnly = true;
+            ChatBox.Size = new Size(752, 263);
+            ChatBox.TabIndex = 0;
+            ChatBox.Text = "";
+       
+            // 
+            // SendButton
+            // 
+            SendButton.BackColor = Color.Cyan;
+            SendButton.Location = new Point(497, 346);
+            SendButton.Name = "SendButton";
+            SendButton.Size = new Size(191, 23);
+            SendButton.TabIndex = 1;
+            SendButton.Text = "Send";
+            SendButton.UseVisualStyleBackColor = false;
+           
+            // 
+            // InputBox
+            // 
+            InputBox.BackColor = SystemColors.InfoText;
+            InputBox.ForeColor = SystemColors.ButtonHighlight;
+            InputBox.Location = new Point(34, 347);
+            InputBox.Name = "InputBox";
+            InputBox.Size = new Size(341, 23);
+            InputBox.TabIndex = 2;
+            
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Tan;
             ClientSize = new Size(800, 450);
-            Text = "Form1";
+            Controls.Add(InputBox);
+            Controls.Add(SendButton);
+            Controls.Add(ChatBox);
+            ForeColor = SystemColors.ActiveCaptionText;
+            Name = "Form1";
+            Text = "Cybersecurity Awareness Bot";
+            Load += Form1_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private RichTextBox ChatBox;
+        private Button SendButton;
+        private TextBox InputBox;
     }
 }

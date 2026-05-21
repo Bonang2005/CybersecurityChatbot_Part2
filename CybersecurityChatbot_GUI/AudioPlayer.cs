@@ -1,12 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Speech.Synthesis;
 
 namespace CybersecurityChatbot_GUI
 {
-    internal class AudioPlayer
+    // This class plays the voice greeting when the app starts
+    public static class AudioPlayer
     {
+        public static void PlayGreeting()
+        {
+            try
+            {
+                // Create a speech synthesizer
+                SpeechSynthesizer synthesizer = new SpeechSynthesizer();
+
+                // Set the volume and speed
+                synthesizer.Volume = 100;
+                synthesizer.Rate = 0;
+
+                // Speak the greeting
+                synthesizer.Speak("Hello! Welcome to the Cybersecurity Awareness Chatbot. I am here to help you stay safe online.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Could not play greeting: " + ex.Message);
+            }
+        }
     }
 }
