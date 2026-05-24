@@ -1,6 +1,5 @@
 namespace CybersecurityChatbot_GUI
 {
-    // This class handles the GUI and user interaction
     public partial class Form1 : Form
     {
         // User profile to track session info
@@ -18,10 +17,8 @@ namespace CybersecurityChatbot_GUI
             AudioPlayer.PlayGreeting();
 
             // Show ASCII art logo in chat box
-            ChatBox.AppendText("  ╔══════════════════════════════════════════╗\n");
-            ChatBox.AppendText("  ║    CYBERSECURITY AWARENESS CHATBOT      ║\n");
-            ChatBox.AppendText("  ║        Keeping You Safe Online          ║\n");
-            ChatBox.AppendText("  ╚══════════════════════════════════════════╝\n\n");
+            ChatBox.AppendText("  CYBERSECURITY AWARENESS CHATBOT\n");
+            ChatBox.AppendText("  Keeping You Safe Online\n\n");
 
             // Ask for the user's name
             string name = Microsoft.VisualBasic.Interaction.InputBox(
